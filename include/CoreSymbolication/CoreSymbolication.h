@@ -47,6 +47,9 @@
 #define __CORESYMBOLICATION_CORESYMBOLICATION__ 1
 #define __CORESYMBOLICATION__ 1
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <CoreFoundation/CoreFoundation.h>
 #include <mach/mach.h>
@@ -133,13 +136,13 @@ typedef int (^CSSegmentIterator)(CSSegmentRef segment);
  * External symbols
  */
 
-const char* kCSRegionMachHeaderName;
-const CSDictionaryKeyCallBacks kCSTypeDictionaryKeyCallBacks;
-const CSDictionaryValueCallBacks kCSTypeDictionaryValueCallBacks;
-const CSDictionaryKeyCallBacks kCSTypeDictionaryWeakKeyCallBacks;
-const CSDictionaryValueCallBacks kCSTypeDictionaryWeakValueCallBacks;
-const CSSetCallBacks kCSTypeSetCallBacks;
-const CSSetCallBacks kCSTypeSetWeakCallBacks;
+extern const char* kCSRegionMachHeaderName;
+extern const CSDictionaryKeyCallBacks kCSTypeDictionaryKeyCallBacks;
+extern const CSDictionaryValueCallBacks kCSTypeDictionaryValueCallBacks;
+extern const CSDictionaryKeyCallBacks kCSTypeDictionaryWeakKeyCallBacks;
+extern const CSDictionaryValueCallBacks kCSTypeDictionaryWeakValueCallBacks;
+extern const CSSetCallBacks kCSTypeSetCallBacks;
+extern const CSSetCallBacks kCSTypeSetWeakCallBacks;
 
 
 /*
@@ -519,5 +522,9 @@ sampling_context_clear_cache
 task_is_64bit
 thread_name_for_thread_port
 */
- 
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
+
 #endif /* ! __CORESYMBOLICATION_CORESYMBOLICATION__ */
