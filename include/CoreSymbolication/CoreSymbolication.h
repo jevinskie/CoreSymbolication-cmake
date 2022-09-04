@@ -324,7 +324,6 @@ CSSymbolOwnerForeachSymbolWithMangledName
 CSSymbolOwnerForeachSymbolWithName
 CSSymbolOwnerGetArchitecture
 CSSymbolOwnerGetBaseAddress
-CSSymbolOwnerGetCFUUIDBytes
 CSSymbolOwnerGetCompatibilityVersion
 CSSymbolOwnerGetCurrentVersion
 CSSymbolOwnerGetDataFlags
@@ -496,7 +495,7 @@ CSSymbolRef CSSymbolOwnerGetSymbolWithAddress(CSSymbolOwnerRef owner, mach_vm_ad
 
 long CSSymbolOwnerForeachSymbol(CSSymbolOwnerRef owner, CSSymbolIterator each);
 
-
+CFUUIDBytes *CSSymbolOwnerGetCFUUIDBytes(CSSymbolOwnerRef owner);
 
 /* Other exports
 
